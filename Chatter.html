@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Virtual Assistant</title>
+    <meta http-equiv="Content-Type" content="text/html; utf-8" />
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="Content/images/favicon.png" type="image/x-icon">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="Content/css/opensans.css" rel="stylesheet"/>
+    <link href="Content/css/fontawesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="Content/css/quirk.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="Content/css/custom.css">
+
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/idle-timer.js"></script>
+    <script src="Scripts/respond.min.js"></script>
+    <script src="Scripts/autosize.min.js"></script>
+    <script src="Scripts/polyfill.js"></script>
+
+    <script src="Utils/Config.js"></script>
+    <script src="Utils/Commum.js"></script>
+    <script src="Scripts/Controllers/ChatterController.js"></script>
+    <script src="Scripts/Chatter/MessagePrinter.js"></script>
+    <script src="Scripts/Commands/ICommand.js"></script>
+    <script src="Scripts/Commands/ImgCommand.js"></script>
+    <script src="Scripts/Commands/jquerySiteResponse.js"></script>
+    <script src="Scripts/Commands/LinkCommand.js"></script>
+    <script src="Scripts/Commands/MultiSelectCommand.js"></script>
+    <script src="Scripts/Commands/NewLineCommand.js"></script>
+    <script src="Scripts/Commands/PasswordCommand.js"></script>
+    <script src="Scripts/Commands/PhoneCommand.js"></script>
+    <script src="Scripts/Commands/StatisticCommand.js"></script>
+    <script src="Scripts/Commands/UploadCommand.js"></script>
+    <script src="Scripts/Commands/UsefulCommand.js"></script>
+    <script src="Utils/Chatter.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="headerpanel" id="topbar" style="border-bottom: 1px solid #00bfcf; width: 100%; position: fixed;">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="imgblock">
+                        <div class="avatar-chat"></div>
+                        <!-- <img src="Content/images/avatar-sophie.png" alt="" class="img-circle center-block avatar-sm"> -->
+                        <span class="user-online-status"></span>
+                        <span class="user-online-status-lg"></span>
+                    </div>
+                </div>
+                <div class="col-xs-3 hidden-xs" style="position: relative; right: 84px;">
+                        <h4 class="text-left">Sophie</h4>
+                        <h6 class="text-left">Assistente virtual</h6>
+                </div> 
+                <div class="col-xs-3 hidden-sm hidden-md hidden-lg" style="position: relative; right: 16px;">
+                        <h4 class="text-left tela-xs">Sophie</h4>
+                        <h6 class="text-left tela-xs">Assistente virtual</h6>
+                </div>                       
+                <div class="col-xs-2">
+                        <!-- <img src="Content/images/logo-sophie.png" class="center-block logosophie" alt="" style="position: relative; right: 30px;"> -->
+                        <div class="logobackg" alt=""></div>
+                </div>
+                <div class="col-xs-5">
+                    <a href="#" class="btnLogoff"><h6 class="text-right pull-right saida" onclick="">Sair</h6></a>
+                </div>
+            </div>
+        </div>
+    </header>
+        
+        <form method="post" id="form2" class="pure-form">
+
+          <div id="chatterDiv" class="chatter conteudo-tela" style="height: auto;">
+              <div id="pnlHistory" class="chat-box">
+              </div>
+          </div>
+      </form>
+
+      <div class="container-fluid bottom-input" style="bottom: 0px; width: 100%;">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel-input" id="user-input">
+                        <div class="panel-body" style="padding-top: 12px;">
+                            <div data-chatter="bot-status" style="color: white; font-size: 12px;" hidden="">Escreva a sua mensagem aqui</div>
+                            <textarea wrap="off" autofocus="" rows="1" class="txtQuestion" onfocusin="RemovePlaceHolder()" onfocusout="AddPlaceHolder()" id="txtQuestion" data-chatter="user-question" maxlength="500" autocomplete="off" onkeypress="return VerifyEnter(event);" placeholder="Escreva a sua mensagem aqui"></textarea>
+                            <img id="btnSend" class="img-responsive send" src="Content/images/send-icon.svg" alt="" style="display: inline-block; width: 40px; cursor: pointer; padding-bottom: 10px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- container-fim -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h6 class="modal-title text-center" id="exampleModalLabel">Contribua para melhorar as respostas da Sophie. Conte-nos o porquê da sua avaliação negativa sobre a resposta</h6>
+                </div>
+                <div class="modal-body">
+                  <form>                   
+                    <div class="form-group">
+                      <label for="message-text" class="control-label">Mensagem</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-xs btn-default" data-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-xs btn-primary">Enviar</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+	<script type="text/javascript">
+    autosize(document.getElementById("txtQuestion"));
+
+    function startLiveAgent() {
+        controller.sendMessage('Stop', 'Stop', false, controller.currentLanguage, false);
+        controller.sendMessage('LiveAgentConnect', 'LiveAgentConnect', false, controller.currentLanguage);
+        showEndBtn();
+    }
+
+    function showEndBtn() {
+        $('#LiveAgentBtnStart').show();
+        $('#LiveAgentBtnStop').hide();
+    }
+
+    function stopLiveAgent() {
+        $.ajax({
+            method: "POST",
+            url: rootDir + `disconnectAspect?SophieSessionID=${chatter.sessionId}`,
+            data: "",
+            success: function (data) {
+                controller.sendMessage('LiveAgentDisconnect', 'LiveAgentDisconnect', false, controller.currentLanguage);
+                showStartBtn();
+            }
+        });
+
+    }
+    function showStartBtn() {
+        $('#LiveAgentBtnStop').hide();
+        $('#LiveAgentBtnStart').show();
+    }
+
+    function checkForAgent() {
+        $.ajax({
+                    method:"POST",
+                    url: rootDir + "GetContextValue?name=redirecttoliveagent&sessionId=" + chatter.sessionId,
+                    cache: false,
+                    success: function (data) {
+                        if (data != "true") {
+                            showStartBtn();
+                        }
+                        else
+                            showEndBtn();
+                    }
+                });
+    }
+</script>
+
+</body>
+</html>

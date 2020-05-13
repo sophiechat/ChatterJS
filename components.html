@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" Content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" Content="IE=edge" />
+    <title>Virtual Assistant</title>
+    <meta http-equiv="Content-Type" Content="text/html; utf-8" />
+    <meta charset="UTF-8" />
+    <!-- <link href="Content/bootstrap.css" rel="stylesheet" /> -->
+    <!-- <link href="Content/css/style.css" rel="stylesheet"/>
+    <link href="Content/css/site.css" rel="stylesheet"/> -->
+    <link href="Content/css/fontawesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="Content/css/quirk.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="Content/css/custom.css">
+    <link rel="stylesheet" href="Content/css/carousel.css">
+
+    <script src="Scripts/config.js"></script>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/login.js"></script>	
+</head> 
+<body class="signwrapper">
+        <header>
+                <div class="headerpanel" style="border-bottom: 1px solid #00bfcf; width: 100%; position: fixed;">
+                    <div class="row">
+                        <div class="col-xs-2">
+                                <img src="Content/images/avatar-sophie.png" alt="" class="img-circle center-block" style="height: 50px;">
+                                <span class="user-online-status" style="left: 61%;top: 66%;"></span>
+                        </div>
+                        <div class="col-xs-3 hidden-xs" style="position: relative; right: 30px;">
+                                <h4 class="text-left">Sophie</h4>
+                                <h6 class="text-left">Assistente virtual</h6>
+                        </div> 
+                        <div class="col-xs-3 hidden-sm hidden-md hidden-lg">
+                                <h4 class="text-left">Sophie</h4>
+                                <h6 class="text-left">Assistente virtual</h6>
+                        </div>                       
+                        <div class="col-xs-2">
+                                <img src="Content/images/logo-sophien.png" class="center-block logosophie" alt="">
+                        </div>
+                        <div class="col-xs-5">
+                                <a href="#" class="btnLogoff"><h6 class="text-right pull-right saida" onclick="">Sair</h6></a>
+                        </div>
+                    </div>
+                        
+                    
+                </div>
+        </header>
+        
+          <!-- <div class="sign-overlay mt40"></div>
+          <div class="signpanel"></div> -->
+
+          <div class="container-fluid conteudo-tela" style="height: auto; padding-bottom: 80px;">
+              <div class="row">
+                  <div class="col-md-6 col-xs-11">
+                        <div class="bubble-left">
+                            <p>Sophie</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur numquam optio iste neque, corrupti, odio sapiente aperiam dignissimos saepe quaerat voluptas nemo error? Expedita eveniet ullam, aliquid dolorem accusantium ducimus?</p>
+                            <p class="text-right txt-data">14:00 <span>&nbsp;&nbsp;<i class="fa fa-smile-o" aria-hidden="true"></i></span> <span><i class="fa fa-meh-o" aria-hidden="true"></i></span></p>
+                        </div>
+                        <div class="area-resposta">
+                            <!-- <div class="row">
+                                <div class="col-xs-6">
+                                    <label class="ckbox ckbox-info">
+                                        <input type="checkbox" checked><span>Checkbox Info</span>
+                                    </label>
+                                    <label class="ckbox ckbox-info">
+                                        <input type="checkbox" checked><span>Checkbox Info</span>
+                                    </label>
+                                    <label class="ckbox ckbox-info">
+                                        <input type="checkbox" checked><span>Checkbox Info</span>
+                                    </label>
+                                    <label class="ckbox ckbox-info">
+                                        <input type="checkbox" checked><span>Checkbox Info</span>
+                                    </label>
+                                </div>
+                                <div class="col-xs-6">
+                                    <label class="ckbox ckbox-info">
+                                        <input type="checkbox" checked><span>Checkbox Info</span>
+                                    </label>
+                                    <label class="ckbox ckbox-info">
+                                        <input type="checkbox" checked><span>Checkbox Info</span>
+                                    </label>
+                                    <label class="ckbox ckbox-info">
+                                        <input type="checkbox" checked><span>Checkbox Info</span>
+                                    </label>
+                                    <label class="ckbox ckbox-info">
+                                        <input type="checkbox" checked><span>Checkbox Info</span>
+                                    </label>
+                                </div>
+                            </div> -->
+
+                            <!-- <div class="panel panelcard"  onclick="javascript:">
+                                <div class="panel-heading">
+                                </div>
+                                <div class="panel-body">
+                                    <img class="center-block img-responsive" src="Content/images/mock-video.jpg" alt="">
+                                    <h5 class="text-center mt20">Vídeo Tutorial</h5>
+                                </div>
+                            </div>
+                            <div class="panel panelcard" onclick="javascript:">
+                                    <div class="panel-heading">
+                                    </div>
+                                    <div class="panel-body">
+                                        <img class="center-block img-responsive" src="Content/images/mock-video.jpg" alt="">
+                                        <h5 class="text-center mt20">Vídeo Tutorial</h5>
+                                    </div>
+                            </div>
+                            <div class="panel panelcard"  onclick="javascript:">
+                                    <div class="panel-heading">
+                                    </div>
+                                    <div class="panel-body">
+                                        <img class="center-block img-responsive" src="Content/images/mock-video.jpg" alt="">
+                                        <h5 class="text-center mt20">Vídeo Tutorial</h5>
+                                    </div>
+                            </div> -->
+
+                            <a href="#" class="btn btn-info mr10 mb10">Acesso á Internet</a>
+                            <a href="#" class="btn btn-info mr10 mb10">Problemas com link de Internet</a>
+                            <a href="#" class="btn btn-info mr10 mb10">Problemas com wireless</a>
+                            <a href="#" class="btn btn-info mr10 mb10">Indisponibilidade no Wifi</a>
+                            <a href="#" class="btn btn-info mr10 mb10">Problemas ao se conectar na rede</a>
+                            <a href="#" class="btn btn-info mr10 mb10">Nenhuma das sugestões</a>                                                                                    
+                                                                          
+                        </div>
+                  </div>
+             </div>
+            <div class="row right">
+                <div class="col-md-6 col-xs-11">
+                    <div class="bubble-right">
+                        <div style="display: inline-block; width: 80%;">
+                            <p>User</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus repellat illo similique?</p>                            
+                        </div>
+                        <div style="width: 20%; float: right;">
+                            <img class="img-responsive center-block" src="Content/images/avatar01.png" alt="User" style="max-height: 65px; padding-bottom: 5px;">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-xs-11">
+                        <div class="bubble-left">
+                            <p>Sophie</p>
+                            <div class="typings">
+                                <span class="typing1"></span>
+                                <span class="typing2"></span>
+                                <span class="typing3"></span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="row">
+                    <div class="col-md-6 col-xs-11">
+                          <div class="bubble-left">
+                              <p>Sophie</p>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur numquam optio iste neque, corrupti, odio sapiente aperiam dignissimos saepe quaerat voluptas nemo error? Expedita eveniet ullam, aliquid dolorem accusantium ducimus?</p>
+                              <p class="text-right txt-data">14:00 <span><i class="fa fa-smile-o" aria-hidden="true"></i></span> <span><i class="fa fa-meh-o" aria-hidden="true"></i></span></p>
+                          </div>
+                          <div class="area-resposta-cards"> 
+                            <div class="panel panelcard"  onclick="javascript:">
+                                <div class="panel-heading">
+                                </div>
+                                <div class="panel-body">
+                                    <img class="center-block img-responsive" src="Content/images/mock-video.jpg" alt="">
+                                    <h5 class="text-center mt20">Vídeo Tutorial</h5>
+                                </div>
+                            </div>
+                            <div class="panel panelcard" onclick="javascript:">
+                                    <div class="panel-heading">
+                                    </div>
+                                    <div class="panel-body">
+                                        <img class="center-block img-responsive" src="Content/images/mock-video.jpg" alt="">
+                                        <h5 class="text-center mt20">Vídeo Tutorial</h5>
+                                    </div>
+                            </div>
+                            <div class="panel panelcard"  onclick="javascript:">
+                                    <div class="panel-heading">
+                                    </div>
+                                    <div class="panel-body">
+                                        <img class="center-block img-responsive" src="Content/images/mock-video.jpg" alt="">
+                                        <h5 class="text-center mt20">Vídeo Tutorial</h5>
+                                    </div>
+                            </div> 
+                            <div class="panel panelcard"  onclick="javascript:">
+                                <div class="panel-heading">
+                                </div>
+                                <div class="panel-body">
+                                    <img class="center-block img-responsive" src="Content/images/mock-video.jpg" alt="">
+                                    <h5 class="text-center mt20">Vídeo Tutorial</h5>
+                                </div>
+                            </div>
+                            <div class="panel panelcard" onclick="javascript:">
+                                    <div class="panel-heading">
+                                    </div>
+                                    <div class="panel-body">
+                                        <img class="center-block img-responsive" src="Content/images/mock-video.jpg" alt="">
+                                        <h5 class="text-center mt20">Vídeo Tutorial</h5>
+                                    </div>
+                            </div>
+                            <div class="panel panelcard"  onclick="javascript:">
+                                    <div class="panel-heading">
+                                    </div>
+                                    <div class="panel-body">
+                                        <img class="center-block img-responsive" src="Content/images/mock-video.jpg" alt="">
+                                        <h5 class="text-center mt20">Vídeo Tutorial</h5>
+                                    </div>
+                            </div>                                                                                   
+                          </div>
+                    </div>
+               </div>
+
+               <div class="row">
+                <div class="col-md-6 col-xs-11">
+                      <div class="bubble-left">
+                          <p>Sophie</p>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur numquam optio iste neque, corrupti, odio sapiente aperiam dignissimos saepe quaerat voluptas nemo error? Expedita eveniet ullam, aliquid dolorem accusantium ducimus?</p>
+                          <p class="text-right txt-data">14:00 <span><i class="fa fa-smile-o" aria-hidden="true"></i></span> <span><i class="fa fa-meh-o" aria-hidden="true"></i></span></p>
+                      </div>
+                      <div class="area-resposta-multipla"> 
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label class="ckbox ckbox-info">
+                                    <input type="checkbox" checked><span>Checkbox Info</span>
+                                </label>
+                                <label class="ckbox ckbox-info">
+                                    <input type="checkbox" checked><span>Checkbox Info</span>
+                                </label>
+                                <label class="ckbox ckbox-info">
+                                    <input type="checkbox" checked><span>Checkbox Info</span>
+                                </label>
+                                <label class="ckbox ckbox-info">
+                                    <input type="checkbox" checked><span>Checkbox Info</span>
+                                </label>
+                            </div>
+                            <div class="col-xs-6">
+                                <label class="ckbox ckbox-info">
+                                    <input type="checkbox" checked><span>Checkbox Info</span>
+                                </label>
+                                <label class="ckbox ckbox-info">
+                                    <input type="checkbox" checked><span>Checkbox Info</span>
+                                </label>
+                                <label class="ckbox ckbox-info">
+                                    <input type="checkbox" checked><span>Checkbox Info</span>
+                                </label>
+                                <label class="ckbox ckbox-info">
+                                    <input type="checkbox" checked><span>Checkbox Info</span>
+                                </label>
+                            </div>
+                        </div>                                                                                   
+                      </div>
+                </div>
+           </div>
+
+            <!-- hero-cards -->
+            <div class="row">
+                <div class="col-md-6 col-xs-11">
+                      <div class="bubble-left">
+                          <p>Sophie</p>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur numquam optio iste neque, corrupti, odio sapiente aperiam dignissimos saepe quaerat voluptas nemo error? Expedita eveniet ullam, aliquid dolorem accusantium ducimus?</p>
+                          <p class="text-right txt-data">14:00 <span><i class="fa fa-smile-o" aria-hidden="true"></i></span> <span><i class="fa fa-meh-o" aria-hidden="true"></i></span></p>
+                      </div>
+                      <div class="area-resposta-cards"> 
+                        <div class="panel2"  onclick="javascript:">
+                            <div class="panel-heading">
+                            </div>
+                            <div class="panel-body" style="padding-bottom: 20px;">
+                                <img class="center-block img-responsive" src="Content/images/techguy.png" alt="">
+                                <h5 class="text-center mt20">Order Status</h5>
+                                <button class="btn btn-sm btn-block btn-info">Option 1</button>
+                                <button class="btn btn-sm btn-block btn-info">Option 2</button>
+                                <button class="btn btn-sm btn-block btn-info">Option 3</button>
+                            </div>
+                        </div>
+                        <div class="panel2"  onclick="javascript:">
+                            <div class="panel-heading">
+                            </div>
+                            <div class="panel-body" style="padding-bottom: 20px;">
+                                <img class="center-block img-responsive" src="Content/images/techguy.png" alt="">
+                                <h5 class="text-center mt20">Order Status</h5>
+                                <button class="btn btn-sm btn-block btn-info">Option 1</button>
+                                <button class="btn btn-sm btn-block btn-info">Option 2</button>
+                                <button class="btn btn-sm btn-block btn-info">Option 3</button>
+                            </div>
+                        </div>
+                        <div class="panel2"  onclick="javascript:">
+                            <div class="panel-heading">
+                            </div>
+                            <div class="panel-body" style="padding-bottom: 20px;">
+                                <img class="center-block img-responsive" src="Content/images/techguy.png" alt="">
+                                <h5 class="text-center mt20">Order Status</h5>
+                                <button class="btn btn-sm btn-block btn-info">Option 1</button>
+                                <button class="btn btn-sm btn-block btn-info">Option 2</button>
+                                <button class="btn btn-sm btn-block btn-info">Option 3</button>
+                            </div>
+                        </div>
+                                                                                                           
+                      </div>
+                </div>
+           </div>
+    
+
+           <!-- cards-detalhados -->
+           <div class="row">
+            <div class="col-md-6 col-xs-11">
+                  <div class="bubble-left">
+                      <p>Sophie</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur numquam optio iste neque, corrupti, odio sapiente aperiam dignissimos saepe quaerat voluptas nemo error? Expedita eveniet ullam, aliquid dolorem accusantium ducimus?</p>
+                      <p class="text-right txt-data">14:00 <span><i class="fa fa-smile-o" aria-hidden="true"></i></span> <span><i class="fa fa-meh-o" aria-hidden="true"></i></span></p>
+                  </div>
+                  <div class="area-resposta-cards"> 
+                    <div class="panel2"  onclick="javascript:">
+                        <div class="panel-heading">
+                        </div>
+                        <div class="panel-body" style="padding-bottom: 20px;">
+                            <img class="center-block img-responsive" src="Content/images/suporte.png" alt="">
+                            <h5 class="text-center mt20">Ticket Status</h5>
+                            <p class="text-center quebra">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima ducimus quam laborum impedit tempore beatae doloribus sequi est similique temporibus. Tenetur porro soluta earum id asperiores enim modi assumenda animi.</p>
+                            <button class="btn btn-sm btn-block btn-info">Option 1</button>
+                            <button class="btn btn-sm btn-block btn-info">Option 2</button>
+                            <button class="btn btn-sm btn-block btn-info">Option 3</button>
+                        </div>
+                    </div>
+                    <div class="panel2"  onclick="javascript:">
+                        <div class="panel-heading">
+                        </div>
+                        <div class="panel-body" style="padding-bottom: 20px;">
+                            <img class="center-block img-responsive" src="Content/images/suporte.png" alt="">
+                            <h5 class="text-center mt20">Ticket Status</h5>
+                            <p class="text-center quebra">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima ducimus quam laborum impedit tempore beatae doloribus sequi est similique temporibus. Tenetur porro soluta earum id asperiores enim modi assumenda animi.</p>
+                            <button class="btn btn-sm btn-block btn-info">Option 1</button>
+                            <button class="btn btn-sm btn-block btn-info">Option 2</button>
+                            <button class="btn btn-sm btn-block btn-info">Option 3</button>
+                        </div>
+                    </div>
+                    <div class="panel2"  onclick="javascript:">
+                        <div class="panel-heading">
+                        </div>
+                        <div class="panel-body" style="padding-bottom: 20px;">
+                            <img class="center-block img-responsive" src="Content/images/suporte.png" alt="">
+                            <h5 class="text-center mt20">Ticket Status</h5>
+                            <p class="text-center quebra">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima ducimus quam laborum impedit tempore beatae doloribus sequi est similique temporibus. Tenetur porro soluta earum id asperiores enim modi assumenda animi.</p>
+                            <button class="btn btn-sm btn-block btn-info">Option 1</button>
+                            <button class="btn btn-sm btn-block btn-info">Option 2</button>
+                            <button class="btn btn-sm btn-block btn-info">Option 3</button>
+                        </div>
+                    </div>
+                                                                                                       
+                  </div>
+            </div>
+       </div>
+
+       <!-- cards-lista -->
+       <div class="row">
+        <div class="col-md-6 col-xs-11">
+              <div class="bubble-left">
+                  <p>Sophie</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur numquam optio iste neque, corrupti, odio sapiente aperiam dignissimos saepe quaerat voluptas nemo error? Expedita eveniet ullam, aliquid dolorem accusantium ducimus?</p>
+                  <p class="text-right txt-data">14:00 <span><i class="fa fa-smile-o" aria-hidden="true"></i></span> <span><i class="fa fa-meh-o" aria-hidden="true"></i></span></p>
+              </div>
+              <div class="area-resposta-cards"> 
+                <div class="panel2"  onclick="javascript:">
+                    <div class="panel-heading">
+                    </div>
+                    <div class="panel-body" style="padding-bottom: 20px;">
+                        <img class="center-block img-responsive img-sm" src="Content/images/about.jpg" alt="">
+                        <h5 class="text-center mt20">Ticket Status</h5>
+                        <p class="text-center quebra">Lorem ipsum dolor sit, amet.</p>
+                        <button class="btn btn-sm btn-info mr10">Option 1</button>
+                        <button class="btn btn-sm btn-info mr10">Option 2</button>
+                        <button class="btn btn-sm btn-info mr10">Option 3</button>
+                    </div>
+                </div>
+                
+                                                                                                   
+              </div>
+        </div>
+   </div>
+
+   <!-- documents -->
+   <div class="row">
+        <div class="col-md-6 col-xs-11">
+            <div class="bubble-left">
+                <p>Sophie</p>
+                <p>Espero ter ajudado</p>
+                <div>
+                    <div style="position: relative;">
+                        <a href="Content/images/about.jpg" rel="lightbox" style="position: relative;" target="_blank">
+                            <img class="img-responsive img-sm" src="Content/images/attach.svg" style="height: 120px; padding-bottom: 10px;">
+                        </a>
+                    </div>
+                </div>
+                <p class="text-left txt-data">14:00 <span><i class="fa fa-smile-o" aria-hidden="true"></i></span> <span><i class="fa fa-meh-o" aria-hidden="true"></i></span></p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- carousel -->
+    <div class="row">
+        <div class="col-md-6 col-xs-11">
+              <div class="bubble-left">
+                  <p>Sophie</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+                  <p class="text-right txt-data">14:00 <span><i class="fa fa-smile-o" aria-hidden="true"></i></span> <span><i class="fa fa-meh-o" aria-hidden="true"></i></span></p>
+              </div>
+              <div class="area-resposta-slide"> 
+                <div class="container">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <h3>Carousel Slider</h3>
+                            </div>
+                            <div class="col-xs-3">
+                                <!-- Controls -->
+                                <div class="controls pull-right mb10">
+                                    <a class="left fa fa-chevron-left btn btn-success w40" href="#carousel-example" data-slide="prev"></a>
+                                    <a class="right fa fa-chevron-right btn btn-success w40" href="#carousel-example" data-slide="next"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="Content/images/surface.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Produto A</h5>
+                                                            <h5 class="price-text-color">$199.99</h5>
+                                                        </div>
+                                                        <div class="rating col-xs-6">
+                                                            <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                            </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                            </i><i class="fa fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="separator clear-left">
+                                                        <p class="btn-add">
+                                                            <i class="fa fa-shopping-cart"></i><a href="#" class="">Comprar</a></p>
+                                                        <p class="btn-details">
+                                                            <i class="fa fa-list"></i><a href="#" class="">Detalhes</a></p>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="col-item">
+                                                    <div class="photo">
+                                                        <img src="Content/images/surface.jpg" class="img-responsive" alt="a" />
+                                                    </div>
+                                                    <div class="info">
+                                                        <div class="row">
+                                                            <div class="price col-md-6">
+                                                                <h5>Produto B</h5>
+                                                                <h5 class="price-text-color">$199.99</h5>
+                                                            </div>
+                                                            <div class="rating col-xs-6">
+                                                                <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                                </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                                </i><i class="fa fa-star"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="separator clear-left">
+                                                            <p class="btn-add">
+                                                                <i class="fa fa-shopping-cart"></i><a href="#" class="">Comprar</a></p>
+                                                            <p class="btn-details">
+                                                                <i class="fa fa-list"></i><a href="#" class="">Detalhes</a></p>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                        
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                                                                                                   
+              </div>
+        </div>
+   </div><!-- fim carousel -->
+    
+   <!-- codigo -->
+   <div class="row">
+        <div class="col-md-6 col-xs-11">
+            <div class="bubble-left">
+                <p>Sophie</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+                <p class="text-right txt-data">14:00 <span><i class="fa fa-smile-o" aria-hidden="true"></i></span> <span><i class="fa fa-meh-o" aria-hidden="true"></i></span></p>
+            </div>
+            <div class="area-resposta"> 
+                    <script type="text/javascript" src="syntaxd/shcore.js"></script>
+                    <script type="text/javascript" src="syntaxd/shbrushjcript.js"></script>
+                    <link href="syntaxd/shcore.css" rel="stylesheet" type="text/css" />
+                    <link href="syntaxd/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+                    <pre class="brush: js">
+                            /**
+                                 * SyntaxHighlighter
+                                 */
+                                function foo()
+                                {
+                                    if (counter <= 10)
+                                        return;
+                                    // it works!
+                                }
+                    </pre>
+                    <script type="text/javascript">
+                        SyntaxHighlighter.all()
+                   </script>
+                                                                                                
+            </div>
+        </div>
+    </div>
+
+    <!-- card-recibo -->
+   <div class="row">
+        <div class="col-md-6 col-xs-11">
+            <div class="bubble-left">
+                <p>Sophie</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+                <p class="text-right txt-data">14:00 <span><i class="fa fa-smile-o" aria-hidden="true"></i></span> <span><i class="fa fa-meh-o" aria-hidden="true"></i></span></p>
+            </div>
+            <div class="area-resposta"> 
+                <div class="panel" style="border: 1px solid lightgray;">
+                    <div class="panel-heading turq" style="padding: 10px;">
+                      <h4 class="text-left" style="margin-left: 20px; color: #fff;">Recibo</h4>
+                    </div>
+                    <div class="panel-body mt10 pb10">
+                      <ul class="media-list user-list">
+                        <li class="media">
+                          <div class="media-body" style="padding-left: 10px;">
+                              <div class="row">
+                                  <div class="col-xs-4">
+                                        <p class="text-left mb0">Pedido</p>
+                                  </div>
+                                  <div class="col-xs-6">
+                                        <p class="text-left mb0">121234567890</p>
+                                  </div>
+                              </div>
+                          </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-body" style="padding-left: 10px;">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                            <p class="text-left mb0">Entrega estimada</p>
+                                    </div>
+                                    <div class="col-xs-6">
+                                            <p class="text-left mb0">12/12/2019</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                <img class="media-object img-circle" src="Content/images/user9.png" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body" style="padding-left: 10px;">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                            <p class="text-left">Surface</p>
+                                            <span>modelo 4</span>
+                                    </div>
+                                    <div class="col-xs-6">
+                                            <p class="text-left">Valor</p>
+                                            <span>R$ XXXX.XX</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                    <img class="media-object img-circle" src="Content/images/user9.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="media-body" style="padding-left: 10px;">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                                <p class="text-left">Surface</p>
+                                                <span>modelo 4</span>
+                                        </div>
+                                        <div class="col-xs-6">
+                                                <p class="text-left">Valor</p>
+                                                <span>R$ XXXX.XX</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        
+                       
+                      </ul>
+                    </div>
+                  </div>
+                                                                                                
+            </div>
+        </div>
+    </div>
+
+    </div><!-- container-fim -->
+
+        <div class="container-fluid bottom-input" style="bottom: 0px; width: 100%;">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel" style="width: 100%; height: 60px; border-radius: 10px; box-shadow: 2px 4px 20px -4px rgba(0,0,0,0.75); margin-right: 10px; display: inline-block;" onclick="javascript:">
+                        <div class="panel-body" style="padding-top: 12px;">
+                            <div data-chatter="bot-status" style="color: white; font-size: 12px;" hidden="">Escreva a sua mensagem aqui</div>
+                            <textarea autofocus="" rows="1" class="txtQuestion" onfocusin="RemovePlaceHolder()" onfocusout="AddPlaceHolder()" id="txtQuestion" data-chatter="user-question" maxlength="500" autocomplete="off" onkeypress="return VerifyEnter(event);" style="width: 90%; display: inline-block; overflow: hidden; word-wrap: break-word; border: none; margin-top: 7px;" placeholder="Escreva a sua mensagem aqui"></textarea>
+                            <!-- <input type="text" class="pergunta" placeholder="Escreva a sua mensagem aqui" style="width: 90%; border: none; display: inline-block;"> -->
+                            <img class="img-responsive recuo" src="Content/images/send-icon.svg" alt="" style="display: inline-block; width: 40px; cursor: pointer; padding-bottom: 10px;" onclick="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row" style="position: relative; bottom: 10px;">
+                <div class="col-xs-12 pull-right">
+                   <p class="text-right" style="color: #00bfcf">
+                       Avalie a sua experiência 
+                       <span style="cursor: pointer;" onclick=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></span> 
+                       <span style="cursor: pointer;" onclick=""><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></span>
+                    </p>
+                </div>
+            </div> -->
+
+        </div><!-- container-fim -->
+
+        
+          
+        
+         
+
+    </body>
+    
+</html>
